@@ -1,0 +1,39 @@
+.header {
+  flex: 0.15;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #1d1d20;
+}
+
+.left {
+  margin-left: 2rem;
+}
+
+.right {
+  margin-right: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.right li {
+  list-style: none;
+}
+
+.svgIcon {
+  width: 24px;
+  height: 24px;
+  fill: grey;
+  transition: all 0.2s ease;
+}
+
+.svgIcon:hover {
+  fill: #d1d1d1;
+  transform: scale(1.4);
+}
+
+.right :first-child,
+.left :first-child {
+  cursor: pointer;
+}
