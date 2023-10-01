@@ -21,14 +21,14 @@
   list-style: none;
 }
 
-.svgIcon {
+.svgIcon, .langIcon {
   width: 24px;
   height: 24px;
   fill: grey;
   transition: all 0.2s ease;
 }
 
-.svgIcon:hover {
+.svgIcon:hover, .langItem:hover > .langIcon {
   fill: #d1d1d1;
   transform: scale(1.4);
 }
@@ -36,4 +36,8 @@
 .right :first-child,
 .left :first-child {
   cursor: pointer;
+}
+
+.langItem:hover > .langIcon {
+  transform: scale(1.2) rotate(180deg);
 }

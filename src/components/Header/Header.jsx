@@ -1,5 +1,6 @@
 import styles from "./Header.module.css";
 import { useDispatch } from "react-redux";
+import { useState } from "react";
 import { setLanguage } from "../../features/languageSlice";
 import i18n from "../../i18n";
 import { useTranslation } from "react-i18next";
@@ -7,8 +8,10 @@ import { ReactComponent as MailIcon } from "../../assets/images/mail.svg";
 import { ReactComponent as GithubIcon } from "../../assets/images/github.svg";
 import { ReactComponent as LangIcon } from "../../assets/images/lang.svg";
 import { ReactComponent as HomeIcon } from "../../assets/images/home.svg";
+import LanguageMenu from "../../components/LanguageMenu/LanguageMenu";
 
 function Header() {
+  const [isMenuVisible, setMenuVisible] = useState(false);
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
@@ -23,12 +26,15 @@ function Header() {
         <HomeIcon className={styles.svgIcon} alt="Home"></HomeIcon>
       </div>
       <ul className={styles.right}>
-        <li>
+        <li className={styles.langItem}
+          onMouseOver={() => setMenuVisible(true)}
+          onMouseOut={() => setMenuVisible(false)}
+        >
           <LangIcon
-            className={styles.svgIcon}
-            onClick={() => changeLanguage("en")}
+            className={styles.langIcon}
             alt="Language"
-          ></LangIcon>
+          />
+          <LanguageMenu isVisible={isMenuVisible} />
         </li>
         <li>
           <a
@@ -40,8 +46,8 @@ function Header() {
           </a>
         </li>
         <li>
-        <a
-            href="https://github.com/philfab"
+          <a
+            href="https://github.com/philfab/portfolio"
             target="_blank"
             rel="noopener noreferrer"
           >
