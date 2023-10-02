@@ -1,5 +1,5 @@
 .header {
-  flex: 0.15;
+  flex: 0.1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,7 +28,7 @@
   transition: all 0.2s ease;
 }
 
-.svgIcon:hover, .langItem:hover > .langIcon {
+.svgIcon:hover {
   fill: #d1d1d1;
   transform: scale(1.4);
 }
@@ -39,5 +39,11 @@
 }
 
 .langItem:hover > .langIcon {
+  fill: #d1d1d1;
+  transform: scale(1.2) rotate(180deg);
+}
+
+.langItem.touched > .langIcon {
+  fill: #d1d1d1;
   transform: scale(1.2) rotate(180deg);
 }

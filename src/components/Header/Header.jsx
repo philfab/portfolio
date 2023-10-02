@@ -1,5 +1,5 @@
 import styles from "./Header.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import { useTranslation } from "react-i18next";
 import { ReactComponent as MailIcon } from "../../assets/images/mail.svg";
 import { ReactComponent as GithubIcon } from "../../assets/images/github.svg";
@@ -9,9 +9,25 @@ import LanguageMenu from "../../components/LanguageMenu/LanguageMenu";
 
 function Header() {
   const [isMenuVisible, setMenuVisible] = useState(false);
-
-  
+  const [isIconTouched, setIconTouched] = useState(false);
   // const { t } = useTranslation();
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (!event.target.closest(".langItem")) {
+        setMenuVisible(false);
+        setIconTouched(false);
+      }
+    }
+    document.addEventListener("touchstart", handleClickOutside);
+    return () => {
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, []);
+
+  const handleTouchStart = () => {
+    setIconTouched(true);
+    setMenuVisible(true);
+  };
 
   return (
     <header className={styles.header}>
@@ -20,14 +36,15 @@ function Header() {
       </div>
       <ul className={styles.right}>
         <li
-          className={styles.langItem}
+          className={`langItem ${styles.langItem} ${isIconTouched ? styles.touched : ''}`}
           onMouseOver={() => setMenuVisible(true)}
           onMouseOut={() => setMenuVisible(false)}
+          onTouchStart={handleTouchStart}
         >
           <LangIcon className={styles.langIcon} alt="Language" />
           <LanguageMenu isVisible={isMenuVisible} />
         </li>
-        <li>
+        <li >
           <a
             href="mailto:mpemploipo@gmail.com"
             target="_blank"
