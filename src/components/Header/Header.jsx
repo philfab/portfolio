@@ -1,6 +1,5 @@
 import styles from "./Header.module.css";
 import { useState, useEffect } from "react";
-// import { useTranslation } from "react-i18next";
 import { ReactComponent as MailIcon } from "../../assets/images/mail.svg";
 import { ReactComponent as GithubIcon } from "../../assets/images/github.svg";
 import { ReactComponent as LangIcon } from "../../assets/images/lang.svg";
@@ -10,7 +9,7 @@ import LanguageMenu from "../../components/LanguageMenu/LanguageMenu";
 function Header() {
   const [isMenuVisible, setMenuVisible] = useState(false);
   const [isIconTouched, setIconTouched] = useState(false);
-  // const { t } = useTranslation();
+
   useEffect(() => {
     function handleClickOutside(event) {
       if (!event.target.closest(".langItem")) {

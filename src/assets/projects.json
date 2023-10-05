@@ -1,0 +1,148 @@
+{
+    "projects": [
+      {
+        "id": 1,
+        "label": "ArgentBank",
+        "description": [
+            "Ultime projet de la formation chez OpenClassrooms. Le but étant la création d'une application web complète", 
+            "et responsive avec React, Redux et Node.js. Le back-end est implémenté avec Express.js et MongoDB. ",
+            "Redux pour gérer le state de l'ensemble de l'application.",
+            "MongoDB pour stocker et modifier les données de l'application.", 
+            "L'API REST pour la communication avec le front-end.",
+            "Le front-end du site est hébergé sur Render (static) ainsi que le back-end (WebService).",
+            "La base MongoDB est située dans le cloud (Atlas)"
+         ],
+        "technologies": ["React", "Redux","Node.js", "Express.js", "MongoDB", "API REST"],
+        "isTraining": true,
+        "site": "https://argentbank-pgnm.onrender.com/",
+        "git": "https://github.com/philfab/muller_philippe_11_code_092023.git",
+        "store": ""
+      },
+      {
+        "id": 2,
+        "label": "OhMyFood",
+        "description": [
+            "Quatrième projet de la formation chez OpenClassrooms.",
+            "Le but étant d'améliorer l'interace d'un site de restauration en ajoutant des animations CSS et ",
+            "de rendre le site entièrement responsive."
+         ],
+        "technologies": ["HTML", "CSS"],
+        "isTraining": true,
+        "site": "https://philfab.github.io/Muller_Philippe_4_code_042023/",
+        "git": "https://github.com/philfab/Muller_Philippe_4_code_042023.git",
+        "store": ""
+      },
+      {
+        "id": 3,
+        "label": "Print-it !",
+        "description": [
+            "Cinquième projet de la formation chez OpenClassrooms.",
+            "Partant d'un site d'imprimerie static, l'objectif étant de rendre le site dynamique avec des animations écrites en ",
+            "JavaScript, notamment un slide show complet."
+         ],
+        "technologies": ["HTML", "CSS","JavaScript"],
+        "isTraining": true,
+        "site": "https://philfab.github.io/Muller_Philippe_5_code_052023/",
+        "git": "https://github.com/philfab/Muller_Philippe_5_code_052023.git",
+        "store": ""
+      },
+      {
+        "id": 4,
+        "label": "Kasa",
+        "description": [
+            "Huitième projet de la formation chez OpenClassrooms.",
+            "C'est la Création une application React complète.",
+            "Utilisation de composants React. Gestion des erreurs(navigation, identification).",
+            "React-Router pour la navigation et les routes, Styled-Components pour une partie du design et ",
+            "les modules CSS pour le reste"
+         ],
+        "technologies": ["React", "Styled Components"],
+        "isTraining": true,
+        "site": "https://muller-philippe-8-code-072023.vercel.app/",
+        "git": "https://github.com/philfab/muller_philippe_8_code_072023.git",
+        "store": ""
+      },
+      {
+        "id": 5,
+        "label": "Delphil",
+        "description": [
+            "Delphil est un jeu d'échecs pour Windows en mode console, écrit en Pascal avec Delphi.",
+            "Il implémente le protocole UCI et nécessite une interface supportant ce protocole.",
+            "Il en existe plusieurs, dont : Arena, Lucas Chess, Tarrasch Chess, SCID...",
+            "Delphil peut accéder aux tables de finales d'Eugène Nalimov (jusqu'à 6 pièces).",
+            "Ces tables au format '.emd' permettent d'augmenter la force du programme en finale.",
+            "Delphil est multi-cores, il supporte jusqu'à 32 processeurs en simultané."
+        ],
+        "technologies": ["Delphi", "TableBases"],
+        "isTraining": false,
+        "site": "https://delphil.nexgate.ch/",
+        "git": "",
+        "store": ""
+      },
+      {
+        "id": 6,
+        "label": "ChesSuccess",
+        "description": [
+            "ChesSuccess est un jeu d'échecs qui va vous permettre de débloquer des succès tout en vous mesurant à l'ordinateur",
+            "Vous avez la possibilité de créer plusieurs profils : les options , parties et succès seront donc personnalisés.",
+            "La force de jeu est adaptée à tous, du débutant au grand maître.",
+            "Plusieurs styles de jeu sont disponibles : normal, agressif et défensif.",
+            "Pour chaque grade, trois succès sont à débloquer : bronze, argent et or. Il y en a 39 en tout.",
+            "Les niveaux de jeu sont entièrement paramétrables avec toutes les incrémentations possibles.",
+            "Une bibliothèque d'ouvertures de plus d'un million de positions permet de varier les parties.",
+            "Vous pouvez analyser vos parties avec l'analyse en temps réel des coups par l'ordinateur(StockFish), ",
+            "les commenter et tester des variantes.",
+            "Créez votre propre position.",
+            "Apprentissage de la bibliothèque (augmente la force de l'ordinateur).",
+            "3 styles d'échiquiers (bois,marbre,métal) sont disponibles en 3D et 2D.",
+            "Jeu en ligne contre d'autres joueurs.",
+            "Accédez aux vidéos dédiées aux échecs sur YouTube, DailyMotion, Twitch.",
+            "Lecture des fichiers pdf et epub.",
+            "Entrainez-vous avec des exercices (trois niveaux de difficulté).",
+            "Traduction de parties commentées.",
+            "Bases de finales online (7 pièces maximum)."
+        ],
+        "technologies": ["C#","C++", "API Rest(Google,LiChess,Twitch)", "PHP", "SQL"],
+        "isTraining": false,
+        "site": "",
+        "git": "",
+        "store": "https://www.microsoft.com/fr-fr/p/chessuccess/9wzdncrdqd1f?rtc=1&activetab=pivot:overviewtab"
+      },
+      {
+        "id": 7,
+        "label": "MemoCrypt",
+        "description": [
+            "MemoCrypt est une application qui vous permet de prendre des notes au quotidien comme dans un journal intime.",
+            "Il est protégé par un mot de passe et votre texte est entièrement crypté (SHA-256), ",
+            "donc impossible à lire avec un quelconque éditeur de texte."
+        ],
+        "technologies": ["C#", "SQL", "Cryptography"],
+        "isTraining": false,
+        "site": "",
+        "git": "",
+        "store": "https://apps.microsoft.com/store/detail/memocrypt/9WZDNCRCSSSD?hl=en-en&gl=en&rtc=1"
+      },
+      {
+        "id": 8,
+        "label": "LudoStars",
+        "description": [
+            "Ludo Stars est un jeu réunissant deux à quatre joueurs. ",
+            "Le but est de faire faire le tour du circuit à vos 4 pions et de les ramener à la maison avant les autres joueurs.",
+            "Vous pouvez y jouer contre d'autres joueurs ou contre l'ordinateur.",
+            "Il y a deux niveaux de difficultés, normal et difficile. En mode difficile, les joueurs dirigés par ",
+            "l'ordinateur évitent si possible de s'éliminer.",
+            "Vous pouvez aussi placer des pièges sur le circuit pour tenter d'éliminer vos adversaires.",
+            "Ludo Stars se joue en local jusqu'à 4 joueurs simultanément (souris, pointeur ou joystick).",
+            "Il est possible de créer jusqu'à 5 profils.",
+            "Essayez de débloquer les 12 succès possibles !",
+            "Les scores des profils sont sauvegardés (victoires, points...)."
+         ],
+        "technologies": ["C#", "Unity", "SQL"],
+        "isTraining": false,
+        "site": "",
+        "git": "",
+        "store": "https://www.microsoft.com/fr-fr/p/ludo-stars/9pnpwjt2lxhd?activetab=pivot:overviewtab"
+      }
+    ]
+  }
+  

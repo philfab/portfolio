@@ -18,6 +18,14 @@ const resources = {
       Contact: "Contact",
     },
   },
+  es: {
+    translation: {
+      Home: "Inicio",
+      Projects: "Proyectos",
+      Training: "Formación",
+      Contact: "Contacto",
+    },
+  },
 };
 
 i18n.use(initReactI18next).init({
