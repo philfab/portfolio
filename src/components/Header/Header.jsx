@@ -3,12 +3,17 @@ import { useState, useEffect } from "react";
 import { ReactComponent as MailIcon } from "../../assets/images/mail.svg";
 import { ReactComponent as GithubIcon } from "../../assets/images/github.svg";
 import { ReactComponent as LangIcon } from "../../assets/images/lang.svg";
-import { ReactComponent as HomeIcon } from "../../assets/images/home.svg";
 import LanguageMenu from "../../components/LanguageMenu/LanguageMenu";
+import TextEffect from "../TextEffect/TextEffect";
+import { useTranslation } from "react-i18next";
+import { useSelector } from 'react-redux';
+import i18n from "../../i18n";
 
 function Header() {
   const [isMenuVisible, setMenuVisible] = useState(false);
   const [isIconTouched, setIconTouched] = useState(false);
+  const currentLanguage = useSelector((state) => state.language.value);
+  const { t } = useTranslation();
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -23,6 +28,11 @@ function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    i18n.changeLanguage(currentLanguage);
+  }, [currentLanguage]);
+  
+
   const handleTouchStart = () => {
     setIconTouched(true);
     setMenuVisible(true);
@@ -31,11 +41,13 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.left}>
-        <HomeIcon className={styles.svgIcon} alt="Home"></HomeIcon>
+        <TextEffect label={t("Home")} id="0"/>
       </div>
       <ul className={styles.right}>
         <li
-          className={`langItem ${styles.langItem} ${isIconTouched ? styles.touched : ''}`}
+          className={`langItem ${styles.langItem} ${
+            isIconTouched ? styles.touched : ""
+          }`}
           onMouseOver={() => setMenuVisible(true)}
           onMouseOut={() => setMenuVisible(false)}
           onTouchStart={handleTouchStart}
@@ -43,7 +55,7 @@ function Header() {
           <LangIcon className={styles.langIcon} alt="Language" />
           <LanguageMenu isVisible={isMenuVisible} />
         </li>
-        <li >
+        <li>
           <a
             href="mailto:mpemploipo@gmail.com"
             target="_blank"

@@ -1,9 +1,9 @@
-// Home.js
 import React, { useState, useEffect } from "react";
 import styles from "./Home.module.css";
 import { useTranslation } from "react-i18next";
 import MenuItem from "../../components/MenuItem/MenuItem";
 import ProjectItem from "../../components/ProjectItem/ProjectItem";
+
 const PROJECTS = "PROJECTS";
 const TRAINING = "TRAINING";
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
   const [transformY, setTransformY] = useState(0);
   const [projects, setProjects] = useState([]);
 
-  const handleClick = (item) => {
+  const handleClickMenuItem = (item) => {
     if (activeItem !== item) {
       setActiveItem(item);
       setTransformY(transformY === 0 ? 100 : 0);
@@ -26,7 +26,7 @@ const Home = () => {
   }, []);
 
   const filteredProjects = projects.filter((project) => {
-    return activeItem === PROJECTS ? !project.isTraining : project.isTraining;
+    return (project.id !== 0) &&  activeItem === PROJECTS ? !project.isTraining : project.isTraining;
   });
 
   return (
@@ -36,13 +36,13 @@ const Home = () => {
           <MenuItem
             isActive={activeItem === TRAINING}
             label={t("Training")}
-            onClick={() => handleClick(TRAINING)}
+            onClick={() => handleClickMenuItem(TRAINING)}
             transformY={transformY}
           />
           <MenuItem
             isActive={activeItem === PROJECTS}
             label={t("Projects")}
-            onClick={() => handleClick(PROJECTS)}
+            onClick={() => handleClickMenuItem(PROJECTS)}
             transformY={-transformY}
           />
         </nav>

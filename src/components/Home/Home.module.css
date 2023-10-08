@@ -10,19 +10,19 @@
     display: flex;
     flex-direction: column;
     margin-left: 50px;
+    align-items: center;
   }
 
   .navbar {
     display: flex;
     flex-direction: column;
-    align-self: center;
+    align-items: center;
   }
 
   .content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    align-self: center;
+    align-items: center;
     padding-top: 80px;
     padding-bottom: 50px;
     gap :30px;

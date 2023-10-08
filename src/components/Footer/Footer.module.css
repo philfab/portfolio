@@ -9,4 +9,5 @@
   font-size: 0.8rem;
   align-self: flex-end;
   padding: 10px;
+  user-select: none;
 }

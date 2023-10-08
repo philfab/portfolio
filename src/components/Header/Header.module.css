@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
   background-color: #1d1d20;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .svgIcon:hover {
-  fill: #d1d1d1;
+  fill: var(--buttonHover);
   transform: scale(1.4);
 }
 
@@ -39,11 +39,11 @@
 }
 
 .langItem:hover > .langIcon {
-  fill: #d1d1d1;
+  fill: var(--buttonHover);
   transform: scale(1.2) rotate(180deg);
 }
 
 .langItem.touched > .langIcon {
-  fill: #d1d1d1;
+  fill:var(--buttonHover);
   transform: scale(1.2) rotate(180deg);
 }

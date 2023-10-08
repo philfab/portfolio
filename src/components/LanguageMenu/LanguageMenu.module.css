@@ -25,6 +25,7 @@ ul {
   align-items: center;
   padding: 8px 0px;
   transition: all 0.3s ease;
+  user-select: none;
 }
 
 .menuItem img,
@@ -36,19 +37,18 @@ ul {
 }
 
 .activeMenuItem span {
-  color: #d1d1d1;
+  color: white;
+  text-shadow: 0 0 5px var(--languageItemShadow),
+    0 0 10px var(--languageItemShadow), 0 0 15px var(--languageItemShadow),
+    0 0 20px var(--languageItemShadow), 0 0 25px var(--languageItemShadow),
+    0 0 30px var(--languageItemShadow), 0 0 35px var(--languageItemShadow);
 }
 
 .activeMenuItem img {
   filter: brightness(1);
 }
 
-.menuItem:hover,
-.activeMenuItem:hover {
-  transform: scale(1.2);
-}
-
-.menuItem:hover span,
-.activeMenuItem:hover span {
-  text-decoration: underline;
+.menuItem:hover {
+  color: var(--buttonHover);
+  transform: scale(1.1);
 }

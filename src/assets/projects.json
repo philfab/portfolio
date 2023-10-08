@@ -1,6 +1,29 @@
 {
     "projects": [
       {
+        "id": 0,
+        "label": "Home",
+        "description": [
+            "Mon nom est Muller Philippe, je suis développeur front-end et concepteur de nombreuses applications, ", 
+            "aussi bien des jeux que des utilitaires ou des applications système.",
+            "Je suis passionné par le jeu d'Echecs qui est à l'origine au début des années 90 de mon entrée dans le monde ",
+            "informatique et de la pprogrammation en particulier.",
+            "J'ai une expérience de développeur de plus de 35 ans en employant principalement des languages comme C#, ", 
+            "C, Pascal (Delphi), C++, VB, PHP, l'utilisation de frameworks comme Visual Studio et Unity ou des technologies comme ",
+            "SQL, API REST entre autres.",
+            "Je suis l'auteur de plusieurs applications encore disponibles dans le Windows Store comme ChesSuccess, LudoStars ou",
+            "MemoCrypt.",
+            "J'ai suivi une formation d'intégrateur Web en 2023 chez OpenClassrooms pour sanctionner mes comptétences de développeur ", 
+            "par un diplôme reconnu par l'état."
+            
+         ],
+        "technologies": [],
+        "isTraining": false,
+        "site": "",
+        "git": "",
+        "store": ""
+      },
+      {
         "id": 1,
         "label": "ArgentBank",
         "description": [
@@ -34,7 +57,7 @@
       },
       {
         "id": 3,
-        "label": "Print-it !",
+        "label": "Print-it",
         "description": [
             "Cinquième projet de la formation chez OpenClassrooms.",
             "Partant d'un site d'imprimerie static, l'objectif étant de rendre le site dynamique avec des animations écrites en ",

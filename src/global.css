@@ -3,6 +3,13 @@
   padding: 0;
 }
 
+:root {
+  --buttonHover: #d1d1d1;
+  --menuItemShadow :#e67e22;
+  --languageItemShadow :#ffb6c1;
+  --headerTextShadow : #1abc9c;
+}
+
 body {
   width: 100vw;
   height: 100vh;
