@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const contentSlice = createSlice({
   name: 'content',
   initialState: {
-    activeButton: 'Home',
+    activeButton: '0',
   },
   reducers: {
     setActiveButton: (state, action) => {
