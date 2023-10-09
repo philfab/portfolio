@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import styles from "./ProjectItem.module.css";
-import { useDispatch, useSelector } from 'react-redux';
-import { setActiveButton } from '../../features/contentSlice';
+import { useDispatch, useSelector } from "react-redux";
+import { setActiveButton } from "../../features/contentSlice";
 
-const ProjectItem = ({ project, index }) => {
+const ProjectItem = ({ project, index , OnClickDetails }) => {
   const dispatch = useDispatch();
-  const activeButton = useSelector(state => state.content.activeButton);
+  const activeButton = useSelector((state) => state.content.activeButton);
   const isActive = activeButton === project.id;
   const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = () => {
-    dispatch(setActiveButton( project.id));
+    dispatch(setActiveButton(project.id));
   };
 
   const handleMouseEnter = () => {
@@ -24,15 +24,20 @@ const ProjectItem = ({ project, index }) => {
   const animationDelay = index * 0.1;
 
   return (
-    <div 
-      className={isHovered && !isActive ? styles.hoverContainer : styles.container} 
-      onMouseEnter={handleMouseEnter} 
+    <div
+      className={
+        isHovered && !isActive ? styles.hoverContainer : styles.container
+      }
+      onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <button
         className={`${isActive ? styles.active : ""} ${styles.button}`}
         style={{ animationDelay: `${animationDelay}s` }}
-        onClick={handleClick}
+        onClick={() => {
+          handleClick();
+          OnClickDetails(project.id);
+        }}
       >
         {project.label}
       </button>

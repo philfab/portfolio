@@ -6,7 +6,7 @@ import { ReactComponent as LangIcon } from "../../assets/images/lang.svg";
 import LanguageMenu from "../../components/LanguageMenu/LanguageMenu";
 import TextEffect from "../TextEffect/TextEffect";
 import { useTranslation } from "react-i18next";
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 import i18n from "../../i18n";
 
 function Header() {
@@ -31,7 +31,6 @@ function Header() {
   useEffect(() => {
     i18n.changeLanguage(currentLanguage);
   }, [currentLanguage]);
-  
 
   const handleTouchStart = () => {
     setIconTouched(true);
@@ -41,7 +40,7 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.left}>
-        <TextEffect label={t("Home")} id="0"/>
+        <TextEffect label={t("Home")} id={0} />
       </div>
       <ul className={styles.right}>
         <li
@@ -66,7 +65,7 @@ function Header() {
         </li>
         <li>
           <a
-            href="https://github.com/philfab/portfolio"
+            href="https://github.com/philfab/"
             target="_blank"
             rel="noopener noreferrer"
           >

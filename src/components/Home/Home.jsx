@@ -3,6 +3,9 @@ import styles from "./Home.module.css";
 import { useTranslation } from "react-i18next";
 import MenuItem from "../../components/MenuItem/MenuItem";
 import ProjectItem from "../../components/ProjectItem/ProjectItem";
+import ProjectDetails from "../../components/ProjectDetails/ProjectDetails";
+import { getProjectDetailsById } from "../../features/contentSlice";
+import { useSelector, useDispatch } from "react-redux";
 
 const PROJECTS = "PROJECTS";
 const TRAINING = "TRAINING";
@@ -11,7 +14,8 @@ const Home = () => {
   const [activeItem, setActiveItem] = useState(PROJECTS);
   const [transformY, setTransformY] = useState(0);
   const [projects, setProjects] = useState([]);
-
+  const dispatch = useDispatch();
+  const sampleData = useSelector((state) => state.content.sampleData);
   const handleClickMenuItem = (item) => {
     if (activeItem !== item) {
       setActiveItem(item);
@@ -26,8 +30,14 @@ const Home = () => {
   }, []);
 
   const filteredProjects = projects.filter((project) => {
-    return (project.id !== 0) &&  activeItem === PROJECTS ? !project.isTraining : project.isTraining;
+    return project.id !== 0 && activeItem === PROJECTS
+      ? !project.isTraining
+      : project.isTraining;
   });
+
+  const handleClickDetails = (id) => {
+    dispatch(getProjectDetailsById(id));
+  };
 
   return (
     <main className={styles.main}>
@@ -48,10 +58,16 @@ const Home = () => {
         </nav>
         <section className={styles.content}>
           {filteredProjects.map((project, index) => (
-            <ProjectItem key={project.id} project={project} index={index} />
+            <ProjectItem
+              key={project.id}
+              project={project}
+              index={index}
+              OnClickDetails={handleClickDetails}
+            />
           ))}
         </section>
       </section>
+      <ProjectDetails data={sampleData} />
     </main>
   );
 };
