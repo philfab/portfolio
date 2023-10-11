@@ -1,0 +1,33 @@
+.buttonLink {
+  color: #0099ff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  border: 2px solid #0099ff;
+  border-radius: 100px;
+  padding: 0.4rem 0.9rem;
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+  transform: scale(1);
+  transition: all 0.4s ease;
+}
+
+.buttonLink:hover {
+  color: #000;
+  background: #0099ff;
+  box-shadow: 0 0 50px #0099ff, 0 0 30px #0099ff;
+
+  animation: elasticEffect 0.4s ease forwards;
+}
+
+@keyframes elasticEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

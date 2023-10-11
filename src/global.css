@@ -3,11 +3,15 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   --buttonHover: #d1d1d1;
-  --menuItemShadow :#e67e22;
-  --languageItemShadow :#ffb6c1;
-  --headerTextShadow : #1abc9c;
+  --menuItemShadow: #e67e22;
+  --languageItemShadow: #ffb6c1;
+  --headerTextShadow: #1abc9c;
 }
 
 body {
