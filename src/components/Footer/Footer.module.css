@@ -6,8 +6,30 @@
 }
 
 .footer span {
-  font-size: 0.9rem;
+  font-size: 1rem;
   align-self: flex-end;
-  margin : 0 50px 20px 0;
+  margin: 0 50px 20px 0;
   user-select: none;
+  animation: animTextFlow 10s infinite alternate;
+}
+
+@keyframes animTextFlow {
+  0% {
+    color: hsla(0, 60%, 60%, 1);
+  }
+  20% {
+    color: hsla(60, 60%, 60%, 1);
+  }
+  40% {
+    color: hsla(90, 60%, 60%, 1);
+  }
+  60% {
+    color: rgb(92, 116, 214);
+  }
+  80% {
+    color: hsla(270, 60%, 60%, 1);
+  }
+  100% {
+    color: hsla(360, 60%, 60%, 1);
+  }
 }
