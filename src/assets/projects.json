@@ -4,7 +4,7 @@
         "id": 0,
         "label": "Home",
         "description":
-          "Mon nom est Muller Philippe, je suis développeur front-end et concepteur de nombreuses applications, aussi bien des jeux que des utilitaires ou des applications système. Je suis passionné par le jeu d'Echecs qui est à l'origine de mon entrée dans le monde informatique et de la programmation en particulier. J'ai une expérience de développeur de plus de 30 ans en employant principalement des languages comme C#, C, Pascal (Delphi), C++, VB, PHP, l'utilisation de frameworks comme Visual Studio et Unity ou des technologies comme SQL, API REST entre autres. Je suis l'auteur de plusieurs applications encore disponibles dans le Windows Store comme ChesSuccess, LudoStars ou MemoCrypt. J'ai suivi une formation d'intégrateur Web en 2023 chez OpenClassrooms pour sanctionner par un diplôme reconnu par l'état mes acquis de développeur."
+          "Mon nom est Muller Philippe, je suis développeur front-end et concepteur d'applications, aussi bien des jeux que des utilitaires ou des applications système. Je suis passionné par le jeu d'Echecs qui est à l'origine de mon entrée dans le monde informatique et de la programmation en particulier. J'ai une expérience de développeur de plus de 30 ans en employant principalement des languages comme C#, C, Pascal (Delphi), C++, VB, PHP, l'utilisation de frameworks comme Visual Studio et Unity ou des technologies comme SQL, API REST entre autres. Je suis l'auteur de trés nombreuses applications dont certaines encore disponibles dans le Windows Store comme ChesSuccess, LudoStars ou MemoCrypt. J'ai suivi une formation d'intégrateur Web en 2023 chez OpenClassrooms pour sanctionner par un diplôme reconnu par l'état mes acquis de développeur."
          ,
         "technologies": [],
         "isTraining": false,
@@ -16,7 +16,7 @@
         "id": 1,
         "label": "OhMyFood",
         "description":
-           "Quatrième projet de la formation chez OpenClassrooms. Le but étant d'améliorer l'interface d'un site de restauration en ajoutant des animations CSS et de rendre le site entièrement responsive. Il doit êtrez conçu en mobile first en utilisant des media queries et des breakpoints. Une maquette est fournie au format Figma ainsi qu'un prototype (Figma) pour les interactions utilisateurs. Les animations à créer sont principalement des animations CSS qui doivent répondre au prototype Figma. Il est aussi impératif de passer avec succés les tests W3C pour les pages HTML et CSS. Finalement il est demandé la création d'animations en JavaScript pour une future mise en production."
+           "Quatrième projet de la formation chez OpenClassrooms. Le but étant d'améliorer l'interface d'un site de restauration en ajoutant des animations CSS et de rendre le site entièrement responsive. Il doit êtrez conçu en mobile first en utilisant les media queries et les breakpoints. Une maquette est fournie au format Figma ainsi qu'un prototype (Figma) pour les interactions utilisateurs. Les animations à créer sont principalement des animations CSS qui doivent répondre au prototype Figma. Il est aussi impératif de passer avec succés les tests W3C pour les pages HTML et CSS. Finalement il est demandé la création d'animations en JavaScript pour une future mise en production."
          ,
         "technologies": ["HTML", "CSS", "SaSS", "JS", "GitHub"],
         "isTraining": true,
@@ -40,7 +40,7 @@
         "id": 3,
         "label": "77 Events",
         "description": 
-            "Dixième projet de la formation chez OpenClassRooms. L'objectif étant le débogage de la partie front-end du site web. Le débogage s'éffectant avec une palette d'outils comme l'inspecteur du navigateur pour la partie HTML-CSS, le débogage via la console pour identifier les parties comportant des erreurs ou des avertissements, le débogage interactif intrinsèque à VSCode pour l'inspection de code (pas à pas, pile d'appels, variables, espions, breakpoints) et React DevTools pour l'inspection de composants, des states, des rendus. Enfin Jest pour implémenter des tests unitaires, d'intégration et enfin E2E pour tester l'intégralité des interactions de l'utilisateur.",
+            "Dixième projet de la formation chez OpenClassRooms. L'objectif étant le débogage de la partie front-end du site web. Le débogage s'effectant avec une palette d'outils comme l'inspecteur du navigateur pour la partie HTML-CSS, le débogage via la console pour identifier les parties comportant des erreurs ou des avertissements, le débogage interactif intrinsèque à VSCode pour l'inspection de code (pas à pas, pile d'appels, variables, espions, breakpoints) et React DevTools pour l'inspection de composants, des states, des rendus. Enfin Jest pour implémenter des tests unitaires, d'intégration et enfin E2E pour tester l'intégralité des interactions de l'utilisateur.",
         "technologies": ["React","DevTools", "Node.js", "SaSS", "Jest"],
         "isTraining": true,
         "site": "https://muller-philippe-10-code-082023.vercel.app/",
@@ -51,7 +51,7 @@
         "id": 4,
         "label": "ArgentBank",
         "description":
-          "Ultime projet de la formation chez OpenClassrooms. Le but étant la création d'une application bancaire avec React, Redux et Node.js. Elle doit être responsive et mobile first. Toute la logique de connexion doit être fonctionnelle (identification, modification, déconnexion). Le back-end est implémenté avec Express.js et MongoDB, Redux pour gérer tout le state de l'application, MongoDB pour stocker et modifier les données de l'application. L'API REST pour la communication avec le front-end. Le front-end du site est hébergé sur Render (static) ainsi que le back-end (WebService). La base MongoDB est située dans le cloud (Atlas). Complétion d'un fichier Swagger (transactions) pour la documentation de l'API."
+          "Ultime projet de la formation chez OpenClassrooms. Le but étant la création d'une application bancaire avec React, Redux et Node.js. Elle doit être responsive et mobile first. Toute la logique de connexion doit être fonctionnelle (identification, modification, déconnexion). Le back-end est implémenté avec Express.js et MongoDB, Redux pour gérer tout le state de l'application, MongoDB pour stocker et modifier les données de l'application. L'API REST pour la communication avec le front-end. Le front-end du site est hébergé sur Render (static) ainsi que le back-end (WebService). La base MongoDB est située dans le cloud (Atlas). Pour finir, il était demandé la complétion d'un fichier Swagger (transactions) pour la documentation de l'API."
          ,
         "technologies": ["React", "Redux", "Express.js", "MongoDB", "API REST", "Swagger"],
         "isTraining": true,
@@ -75,7 +75,7 @@
         "id": 6,
         "label": "ChesSuccess",
         "description": 
-           "ChesSuccess est un jeu d'échecs qui va vous permettre de débloquer des succès (39 en tout) tout en vous mesurant à l'ordinateur. Plusieurs profils possibles : options, parties et succès seront personnalisés. La force de jeu va du débutant au grand maître. Plusieurs styles de jeu : normal, agressif et défensif. Une bibliothèque d'ouvertures (auto-modulée) de plus d'un million de positions permet de varier les parties. Vous pouvez analyser vos parties avec l'ordinateur (StockFish), les commenter et tester des variantes. Les mises à jour sont automatiques, que ce soit les base de données de parties ou de tests, ou la dernière version de Stockfish (PHP date comparaison). De trés nombreuses technos (XAML, C#, C++, SQL, API REST..), outils (FontForge, 3DSMax, Blender, Photoshop, Inkscape, Audacity..), bibliothèques (PDF, Epub, WebView2, SQLite..), API's (Youtube, Twitch, Daylimotion, Google Translate) entre autres, ont été utilisés pour ce projet.",
+           "ChesSuccess est un jeu d'échecs qui va vous permettre de débloquer des succès (39 en tout) tout en vous mesurant à l'ordinateur. Plusieurs profils possibles : options, parties et succès seront personnalisés. La force de jeu va du débutant au grand maître. Plusieurs styles de jeu : normal, agressif et défensif. Une bibliothèque d'ouvertures (auto-modulée) de plus d'un million de positions permet de varier les parties. Vous pouvez analyser vos parties avec l'ordinateur (StockFish), les commenter et tester des variantes. Les mises à jour sont automatiques, que ce soit les bases de données de parties ou de tests, ou la dernière version de Stockfish (PHP date comparaison). De trés nombreuses technos (XAML, C#, C++, SQL, API REST..), outils (FontForge, 3DSMax, Blender, Photoshop, Inkscape, Audacity..), bibliothèques (PDF, Epub, WebView2, SQLite..), API's (Youtube, Twitch, Daylimotion, Google Translate) entre autres, ont été utilisés pour ce projet.",
         
         "technologies": ["C#","C++", "API Rest", "PHP", "SQL"],
         "isTraining": false,
