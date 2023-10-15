@@ -6,12 +6,12 @@
   font-size: 0.7rem;
   font-weight: 600;
   border: none;
-  user-select: none;
 }
 
 .buttonTechno span {
   color: transparent;
   background-clip: text;
+  pointer-events: none;
 }
 
 .buttonTechno::before,
