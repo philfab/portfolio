@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import styles from "./ProjectDetails.module.css";
 import { useTranslation } from "react-i18next";
 import LinkButton from "../../components/LinkButton/LinkButton";
@@ -5,23 +6,54 @@ import TechnoButton from "../../components/TechnoButton/TechnoButton";
 
 const ProjectDetails = ({ data }) => {
   const { t } = useTranslation();
-  const label = t(data.label) ? t(data.label) : data.label;
+  const [currentData, setCurrentData] = useState(data);
+  const [label, setLabel] = useState(data.label);
+  const [angle, setAngle] = useState(0);
+
+  useEffect(() => {
+      document.body.style.pointerEvents = 'none';
+      setAngle(90);
+      const firstTimer = setTimeout(() => {
+        setCurrentData(data);
+        setLabel( t(data.label) ? t(data.label) : data.label)
+        setAngle(90);
+      }, 200);
+      const secondTimer = setTimeout(() => {
+        setAngle(0);
+        document.body.style.pointerEvents = 'auto';
+      }, 400);
+      return () => {
+        clearTimeout(firstTimer);
+        clearTimeout(secondTimer);
+        document.body.style.pointerEvents = 'auto';
+      };
+    
+  }, [data, t]);
+
+  const rotateStyle = {
+    transform: `rotateX(${angle}deg)`,
+    transition: "transform 0.2s ease-in-out",
+  };
 
   return (
-    <section className={styles.projectDetailContainer}>
+    <section className={styles.projectDetailContainer} style={rotateStyle}>
       <h3 className={styles.title}>{label}</h3>
-      <article className={styles.description}>{data.description}</article>
+      <article className={styles.description}>{currentData.description}</article>
       <div className={styles.buttonsContainer}>
         <ul className={styles.links}>
-          {data.site ? <LinkButton text="View Site" link={data.site} /> : null}
-          {data.git ? <LinkButton text="GitHub" link={data.git} /> : null}
-          {data.store ? (
-            <LinkButton text="Windows Store" link={data.store} />
+          {currentData.site ? (
+            <LinkButton text="View Site" link={currentData.site} />
+          ) : null}
+          {currentData.git ? (
+            <LinkButton text="GitHub" link={currentData.git} />
+          ) : null}
+          {currentData.store ? (
+            <LinkButton text="Windows Store" link={currentData.store} />
           ) : null}
         </ul>
         <ul className={styles.technologies}>
-          {data.technologies && data.technologies.length > 0
-            ? data.technologies.map((tech, index) => (
+          {currentData.technologies && currentData.technologies.length > 0
+            ? currentData.technologies.map((tech, index) => (
                 <TechnoButton text={tech} key={index} />
               ))
             : null}

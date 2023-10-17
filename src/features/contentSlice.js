@@ -1,21 +1,21 @@
-import { createSlice , createAsyncThunk } from '@reduxjs/toolkit';
-
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const fetchProjects = async () => {
-  const data = await import('../assets/projects.json');
+  const data = await import("../assets/projects.json");
   return data.projects;
 };
 
 export const getProjectDetailsById = createAsyncThunk(
-  'content/getProjectDetailsById',
+  "content/getProjectDetailsById",
   async (projectId) => {
     const allProjects = await fetchProjects();
-    
+
     const project = allProjects.find((p) => p.id === projectId);
-    
+
     if (project) {
       return {
-        label : project.label,
+        id : project.id,
+        label: project.label,
         description: project.description,
         technologies: project.technologies,
         isTraining: project.isTraining,
@@ -30,7 +30,7 @@ export const getProjectDetailsById = createAsyncThunk(
 );
 
 export const contentSlice = createSlice({
-  name: 'content',
+  name: "content",
   initialState: {
     activeButton: 0,
     sampleData: {},
@@ -42,7 +42,9 @@ export const contentSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(getProjectDetailsById.fulfilled, (state, action) => {
-      state.sampleData = action.payload;
+      if (state.sampleData.id !== action.payload.id) {
+        state.sampleData = action.payload;
+      }
     });
   },
 });
