@@ -10,7 +10,7 @@
 .buttonsContainer {
   display: flex;
   justify-content: space-between;
-  margin-top: 5px;
+  margin-top: 30px;
 }
 
 .description {
@@ -35,9 +35,36 @@
   margin-left: 20px;
   gap: 7px;
 }
+.grid{
+  display: flex;
+  place-items: center;
 
+}
 .title {
-  margin: 20px 0 10px 0;
+  margin: 20px 0 30px 0;
   user-select: none;
-  color: var(--buttonHover);
+  font-size: 2.5rem;
+  background-clip: text;
+  background-image: linear-gradient(to right, #09f1b8, #00a2ff, #ff00d2, #fed90f);
+  color: #1d1d20;
+  font-weight: 700;
+  letter-spacing: calc(1em / 10);
+  padding: calc(calc(1em / 16) / 2);
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: calc(1em / 12);
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.1) translateZ(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateZ(0);
+    opacity: 1;
+  }
+}
+
+.zoomInEffect {
+  animation: zoomIn 1.2s ease-out;
 }
