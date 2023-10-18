@@ -11,8 +11,10 @@ const LanguageMenu = ({ isVisible }) => {
   const dispatch = useDispatch();
 
   const changeLanguage = (newLang) => {
-    i18n.changeLanguage(newLang);
-    dispatch(setLanguage(newLang));
+    if (currentLanguage !== newLang) {
+      i18n.changeLanguage(newLang);
+      dispatch(setLanguage(newLang));
+    }
   };
 
   const languages = [

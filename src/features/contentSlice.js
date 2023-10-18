@@ -37,7 +37,9 @@ export const contentSlice = createSlice({
   },
   reducers: {
     setActiveButton: (state, action) => {
-      state.activeButton = action.payload;
+      if (state.activeButton !== action.payload) {
+        state.activeButton = action.payload;
+      }
     },
   },
   extraReducers: (builder) => {
