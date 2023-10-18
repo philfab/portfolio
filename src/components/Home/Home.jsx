@@ -38,7 +38,7 @@ const Home = () => {
   const handleClickDetails = (id) => {
     dispatch(getProjectDetailsById(id));
   };
-
+  
   return (
     <main className={styles.main}>
       <section className={styles.sidebar}>

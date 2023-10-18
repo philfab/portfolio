@@ -23,6 +23,8 @@ body {
   color: grey;
   background: #1d1d20;
   font-family: "Montserrat", sans-serif;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
 }
 
 .mainContainer {
@@ -31,4 +33,10 @@ body {
   max-width: 1280px;
   width: 100vw;
   height: 100vh;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }

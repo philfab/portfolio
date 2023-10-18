@@ -1,7 +1,6 @@
 import styles from "./LanguageMenu.module.css";
 import EnglishFlag from "../../assets/images/flags/uk.png";
 import FrenchFlag from "../../assets/images/flags/fr.png";
-import SpanishFlag from "../../assets/images/flags/es.png";
 import { useSelector, useDispatch } from "react-redux";
 import { setLanguage } from "../../features/languageSlice";
 import i18n from "../../i18n";
@@ -20,7 +19,6 @@ const LanguageMenu = ({ isVisible }) => {
   const languages = [
     { id: "en", label: "English", flag: EnglishFlag },
     { id: "fr", label: "Français", flag: FrenchFlag },
-    { id: "es", label: "Español", flag: SpanishFlag },
   ];
 
   return (

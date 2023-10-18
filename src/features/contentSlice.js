@@ -9,14 +9,11 @@ export const getProjectDetailsById = createAsyncThunk(
   "content/getProjectDetailsById",
   async (projectId) => {
     const allProjects = await fetchProjects();
-
     const project = allProjects.find((p) => p.id === projectId);
-
     if (project) {
       return {
         id : project.id,
         label: project.label,
-        description: project.description,
         technologies: project.technologies,
         isTraining: project.isTraining,
         site: project.site,

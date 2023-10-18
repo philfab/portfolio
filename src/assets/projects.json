@@ -3,9 +3,6 @@
       {
         "id": 0,
         "label": "Home",
-        "description":
-          "Mon nom est Muller Philippe, je suis développeur front-end et concepteur d'applications, aussi bien des jeux que des utilitaires ou des applications système. Je suis passionné par le jeu d'Echecs qui est à l'origine de mon entrée dans le monde informatique et de la programmation en particulier. J'ai une expérience de développeur de plus de 30 ans en employant principalement des languages comme C#, C, Pascal (Delphi), C++, VB, PHP, l'utilisation de frameworks comme Visual Studio et Unity ou des technologies comme SQL, API REST entre autres. Je suis l'auteur de trés nombreuses applications dont certaines encore disponibles dans le Windows Store comme ChesSuccess, LudoStars ou MemoCrypt. J'ai suivi une formation d'intégrateur Web en 2023 chez OpenClassrooms pour sanctionner par un diplôme reconnu par l'état mes acquis de développeur."
-         ,
         "technologies": [],
         "isTraining": false,
         "site": "",
@@ -15,9 +12,6 @@
       {
         "id": 1,
         "label": "OhMyFood",
-        "description":
-           "Quatrième projet de la formation chez OpenClassrooms. Le but étant d'améliorer l'interface d'un site de restauration en ajoutant des animations CSS et de rendre le site entièrement responsive. Il doit êtrez conçu en mobile first en utilisant les media queries et les breakpoints. Une maquette est fournie au format Figma ainsi qu'un prototype (Figma) pour les interactions utilisateurs. Les animations à créer sont principalement des animations CSS qui doivent répondre au prototype Figma. Il est aussi impératif de passer avec succés les tests W3C pour les pages HTML et CSS. Finalement il est demandé la création d'animations en JavaScript pour une future mise en production."
-         ,
         "technologies": ["HTML", "CSS", "SaSS", "JS", "GitHub"],
         "isTraining": true,
         "site": "https://philfab.github.io/Muller_Philippe_4_code_042023/",
@@ -27,9 +21,6 @@
       {
         "id": 2,
         "label": "Agence Kasa",
-        "description":
-           "Huitième projet de la formation chez OpenClassrooms. Le but étant la création d'une application React complète sans avoir recours à une bibliothèque externe. Elle doit être responsive et doit correspondre à la maquette Figma. Le principe 'un composant - un fichier' doit être respecté. Il ne doit y avoir aucune erreur ni avertissement dans la console. Première véritable utilisation de React (Create React app). Implémentation de React Router pour toutes les pages de l'application. Initiation aux states, aux hooks et aux composants. Interception des erreurs de navigation et d'identification. Outre le fait d'implémenter React, le projet contient aussi des technologies comme les Styled-Components ou Sass."
-         ,
         "technologies": ["React", "React-Router" ,"Node.js", "Styled Components"],
         "isTraining": true,
         "site": "https://muller-philippe-8-code-072023.vercel.app/",
@@ -39,8 +30,6 @@
       {
         "id": 3,
         "label": "77 Events",
-        "description": 
-            "Dixième projet de la formation chez OpenClassRooms. L'objectif étant le débogage de la partie front-end du site web. Le débogage s'effectant avec une palette d'outils comme l'inspecteur du navigateur pour la partie HTML-CSS, le débogage via la console pour identifier les parties comportant des erreurs ou des avertissements, le débogage interactif intrinsèque à VSCode pour l'inspection de code (pas à pas, pile d'appels, variables, espions, breakpoints) et React DevTools pour l'inspection de composants, des states, des rendus. Enfin Jest pour implémenter des tests unitaires, d'intégration et enfin E2E pour tester l'intégralité des interactions de l'utilisateur.",
         "technologies": ["React","DevTools", "Node.js", "SaSS", "Jest"],
         "isTraining": true,
         "site": "https://muller-philippe-10-code-082023.vercel.app/",
@@ -50,9 +39,6 @@
       {
         "id": 4,
         "label": "ArgentBank",
-        "description":
-          "Ultime projet de la formation chez OpenClassrooms. Le but étant la création d'une application bancaire avec React, Redux et Node.js. Elle doit être responsive et mobile first. Toute la logique de connexion doit être fonctionnelle (identification, modification, déconnexion). Le back-end est implémenté avec Express.js et MongoDB, Redux pour gérer tout le state de l'application, MongoDB pour stocker et modifier les données de l'application. L'API REST pour la communication avec le front-end. Le front-end du site est hébergé sur Render (static) ainsi que le back-end (WebService). La base MongoDB est située dans le cloud (Atlas). Pour finir, il était demandé la complétion d'un fichier Swagger (transactions) pour la documentation de l'API."
-         ,
         "technologies": ["React", "Redux", "Express.js", "MongoDB", "API REST", "Swagger"],
         "isTraining": true,
         "site": "https://argentbank-pgnm.onrender.com/",
@@ -62,9 +48,6 @@
       {
         "id": 5,
         "label": "Delphil",
-        "description": 
-           "Delphil est un jeu d'échecs pour Windows en mode console, écrit en Pascal avec Delphi. Il implémente le protocole UCI et nécessite une interface supportant ce protocole. Il en existe plusieurs, dont : Arena, Lucas Chess, Tarrasch Chess, SCID... Delphil peut accéder aux tables de finales d'Eugène Nalimov (jusqu'à 6 pièces). Ces tables au format '.emd' permettent d'augmenter la force du programme en finale. Delphil est multi-cores, il supporte jusqu'à 32 processeurs en simultané. La création de la bibliothèque externe permettant l'accés aux Tables est écrite en C++ (EGTB.dll) avec un exemple en Pacsal sur le site."
-        ,
         "technologies": ["Delphi", "C++", "TableBases"],
         "isTraining": false,
         "site": "https://delphil.nexgate.ch/",
@@ -74,9 +57,6 @@
       {
         "id": 6,
         "label": "ChesSuccess",
-        "description": 
-           "ChesSuccess est un jeu d'échecs qui va vous permettre de débloquer des succès (39 en tout) tout en vous mesurant à l'ordinateur. Plusieurs profils possibles : options, parties et succès seront personnalisés. La force de jeu va du débutant au grand maître. Plusieurs styles de jeu : normal, agressif et défensif. Une bibliothèque d'ouvertures (auto-modulée) de plus d'un million de positions permet de varier les parties. Vous pouvez analyser vos parties avec l'ordinateur (StockFish), les commenter et tester des variantes. Les mises à jour sont automatiques, que ce soit les bases de données de parties ou de tests, ou la dernière version de Stockfish (PHP date comparaison). De trés nombreuses technos (XAML, C#, C++, SQL, API REST..), outils (FontForge, 3DSMax, Blender, Photoshop, Inkscape, Audacity..), bibliothèques (PDF, Epub, WebView2, SQLite..), API's (Youtube, Twitch, Daylimotion, Google Translate) entre autres, ont été utilisés pour ce projet.",
-        
         "technologies": ["C#","C++", "API Rest", "PHP", "SQL"],
         "isTraining": false,
         "site": "",
@@ -86,9 +66,6 @@
       {
         "id": 7,
         "label": "MemoCrypt",
-        "description": 
-          "MemoCrypt est une application qui vous permet de prendre des notes au quotidien comme dans un journal intime. Il est protégé par un mot de passe (et un indice pour le retrouver en cas d'oubli) et votre texte ainsi que le mot de passe sont entièrement cryptés (SHA-256), donc impossible à lire avec un quelconque éditeur de texte. Réalisé principalement avec Visual Studio , plusieurs outils ont été utilisés comme FontForge, Photoshop, SQlite, ainsi qu'une bibliothèque dédiée à la cryptographie. De nombreux utilisateurs (Windows Store) ont égaré leur mot de passe ou omis de créer un indice pour le retrouver. Dans ces cas, je n'ai pu leur venir en aide en raison du niveau de sécurité de l'application , je ne suis pas en mesure de le retrouver."
-        ,
         "technologies": ["C#", "SQL", "FontForge", "Cryptography"],
         "isTraining": false,
         "site": "",
@@ -98,8 +75,6 @@
       {
         "id": 8,
         "label": "LudoStars",
-        "description": 
-          "Ludo Stars est un jeu réunissant deux à quatre joueurs. Le but est de faire faire le tour du circuit à vos 4 pions et de les ramener à la maison avant les autres joueurs. Vous pouvez y jouer contre d'autres joueurs ou contre l'ordinateur. Il y a deux niveaux de difficultés, normal et difficile. En mode difficile, les joueurs dirigés par l'ordinateur évitent si possible de s'éliminer. Vous pouvez aussi placer des pièges sur le circuit pour tenter d'éliminer vos adversaires. Ludo Stars se joue en local jusqu'à 4 joueurs simultanément (souris, pointeur ou joystick). Il est possible de créer jusqu'à 5 profils. Essayez de débloquer les 12 succès possibles ! Les scores des profils sont sauvegardés (victoires, points...). Le jeu a été conçu principalement avec Unity, même si de nombreux autres outils ont été utilisés comme SQLite, Inkscape, Audacity etc..",
         "technologies": ["C#", "C++", "Unity", "SQL"],
         "isTraining": false,
         "site": "",

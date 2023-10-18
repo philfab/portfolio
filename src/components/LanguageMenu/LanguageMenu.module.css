@@ -8,6 +8,7 @@
 .languageNav {
   opacity: 0;
   pointer-events: none;
+  
 }
 
 .visibleLanguageNav {
@@ -16,25 +17,29 @@
 }
 
 ul {
-  margin-top: 10px;
-  font-size: 0.8rem;
+  margin-top: 5px;
+  font-size: 0.9rem;
 }
 
 .menuItem,
 .activeMenuItem {
   display: flex;
   align-items: center;
-  padding: 5px 0px;
+  padding: 7px 0px;
   transition: all 0.3s ease;
   user-select: none;
+  
+ 
 }
 
 .menuItem img,
 .activeMenuItem img {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   margin-right: 8px;
+  
   filter: brightness(0.5);
+
 }
 
 .activeMenuItem span {
@@ -51,5 +56,5 @@ ul {
 
 .menuItem:hover {
   color: var(--buttonHover);
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
