@@ -3,7 +3,7 @@ import styles from "./ProjectDetails.module.css";
 import { useTranslation } from "react-i18next";
 import LinkButton from "../../components/LinkButton/LinkButton";
 import TechnoButton from "../../components/TechnoButton/TechnoButton";
-import Zoom from "react-reveal/Zoom";
+import { Slide } from "react-awesome-reveal";
 
 const ProjectDetails = ({ data }) => {
   const { t } = useTranslation();
@@ -59,7 +59,7 @@ const ProjectDetails = ({ data }) => {
       </div>
 
       <article className={styles.description}>{description}</article>
-      <Zoom key={key}>
+      <Slide  key={key} direction="up">
         <div className={styles.buttonsContainer}>
           <ul className={styles.links}>
             {currentData.site ? (
@@ -80,7 +80,7 @@ const ProjectDetails = ({ data }) => {
               : null}
           </ul>
         </div>
-      </Zoom>
+      </Slide >
     </section>
   );
 };

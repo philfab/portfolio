@@ -67,5 +67,5 @@
 }
 
 .zoomInEffect {
-  animation: zoomIn 1.2s ease-out;
+  animation: zoomIn 1.2s forwards;
 }
