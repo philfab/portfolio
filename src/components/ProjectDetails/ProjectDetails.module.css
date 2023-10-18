@@ -52,6 +52,7 @@
   padding: calc(calc(1em / 16) / 2);
   -webkit-text-stroke-color: transparent;
   -webkit-text-stroke-width: calc(1em / 12);
+  font-family: Poppins, sans-serif;
 }
 
 @keyframes zoomIn {
