@@ -16,10 +16,13 @@ const ProjectDetails = ({ data }) => {
   const [key, setKey] = useState(0);
 
   useEffect(() => {
-    setAnimationKey((prevKey) => prevKey + 1);
+    if (label) {
+      setAnimationKey((prevKey) => prevKey + 1);
+    }
   }, [label]);
 
   useEffect(() => {
+    if (!data || Object.keys(data).length === 0) return;
     document.body.style.pointerEvents = "none";
     setAngle(90);
     const firstTimer = setTimeout(() => {
@@ -47,6 +50,8 @@ const ProjectDetails = ({ data }) => {
     transition: "transform 0.3s ease-in-out",
   };
 
+  if (!data || Object.keys(data).length === 0) return;
+
   return (
     <section className={styles.projectDetailContainer} style={rotateStyle}>
       <div className={styles.grid}>
@@ -59,7 +64,7 @@ const ProjectDetails = ({ data }) => {
       </div>
 
       <article className={styles.description}>{description}</article>
-      <Slide  key={key} direction="up">
+      <Slide key={key} direction="up">
         <div className={styles.buttonsContainer}>
           <ul className={styles.links}>
             {currentData.site ? (
@@ -80,7 +85,7 @@ const ProjectDetails = ({ data }) => {
               : null}
           </ul>
         </div>
-      </Slide >
+      </Slide>
     </section>
   );
 };
