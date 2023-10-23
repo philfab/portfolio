@@ -31,6 +31,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 1280px;
+  max-height: 790px;
   width: 100vw;
   height: 100vh;
 }
