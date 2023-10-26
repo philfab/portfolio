@@ -16,19 +16,6 @@ function Header() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (!event.target.closest(".langItem")) {
-        setMenuVisible(false);
-        setIconTouched(false);
-      }
-    }
-    document.addEventListener("touchstart", handleClickOutside);
-    return () => {
-      document.removeEventListener("touchstart", handleClickOutside);
-    };
-  }, []);
-
-  useEffect(() => {
     i18n.changeLanguage(currentLanguage);
   }, [currentLanguage]);
 
@@ -39,6 +26,14 @@ function Header() {
 
   return (
     <header className={styles.header}>
+      <div
+        className={`${styles.modalBackground} ${isMenuVisible ? styles.show : ""}`}
+        onClick={(e) => {
+          e.stopPropagation();
+          setMenuVisible(false);
+          setIconTouched(false);
+        }}
+      ></div>
       <div className={styles.left}>
         <TextEffect label={t("Home")} id={0} />
       </div>
@@ -54,6 +49,7 @@ function Header() {
           <LangIcon className={styles.langIcon} alt="Language" />
           <LanguageMenu isVisible={isMenuVisible} />
         </li>
+
         <li>
           <a
             href="mailto:mpemploipo@gmail.com"
