@@ -1,14 +1,13 @@
 .languageNav,
 .visibleLanguageNav {
   position: absolute;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   z-index: 1;
 }
 
 .languageNav {
   opacity: 0;
   pointer-events: none;
-  
 }
 
 .visibleLanguageNav {
@@ -28,8 +27,6 @@ ul {
   padding: 7px 0px;
   transition: all 0.3s ease;
   user-select: none;
-  
- 
 }
 
 .menuItem img,
@@ -37,9 +34,7 @@ ul {
   width: 28px;
   height: 28px;
   margin-right: 8px;
-  
   filter: brightness(0.5);
-
 }
 
 .activeMenuItem span {

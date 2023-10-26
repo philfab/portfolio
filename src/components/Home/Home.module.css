@@ -35,4 +35,23 @@
     padding-bottom: 50px;
     gap :30px;
   }
+
+  @media (max-width: 768px) {
+    .main {
+      flex-direction: column;
+    }
+    .navbar {
+      width: 100%;
+
+    }
+    .sidebar{
+      margin-left: 0;
+    }
+    .content {
+      flex-direction: row;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      gap: 20px;
+    }
+  }
   

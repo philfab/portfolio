@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem 1rem 1rem;
+  padding: 1rem;
   background-color: #1d1d20;
 }
 
@@ -21,7 +21,8 @@
   list-style: none;
 }
 
-.svgIcon, .langIcon {
+.svgIcon,
+.langIcon {
   width: 24px;
   height: 24px;
   fill: grey;
@@ -44,6 +45,20 @@
 }
 
 .langItem.touched > .langIcon {
-  fill:var(--buttonHover);
+  fill: var(--buttonHover);
   transform: scale(1.2) rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 0 1rem 0;
+  }
+
+  .left {
+    margin-left: 1rem;
+  }
+
+  .right {
+    margin-right: 1rem;
+  }
 }

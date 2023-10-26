@@ -14,6 +14,7 @@ export const getProjectDetailsById = createAsyncThunk(
       return {
         id : project.id,
         label: project.label,
+        label_m : project.label_m,
         technologies: project.technologies,
         isTraining: project.isTraining,
         site: project.site,

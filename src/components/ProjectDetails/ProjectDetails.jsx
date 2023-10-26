@@ -63,8 +63,13 @@ const ProjectDetails = ({ data }) => {
         </h3>
       </div>
 
-      <article className={styles.description}>{description}</article>
-      <Slide key={key} direction="up">
+      <article
+        className={styles.description}
+        dangerouslySetInnerHTML={{
+          __html: description.split("\n").join("<br />"),
+        }}
+      ></article>
+      <Slide key={key} direction="up" triggerOnce={true}>
         <div className={styles.buttonsContainer}>
           <ul className={styles.links}>
             {currentData.site ? (

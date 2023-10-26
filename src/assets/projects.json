@@ -12,6 +12,7 @@
       {
         "id": 1,
         "label": "OhMyFood",
+        "label_m": "Oh MyFood",
         "technologies": ["HTML", "CSS", "SaSS", "JS", "GitHub"],
         "isTraining": true,
         "site": "https://philfab.github.io/Muller_Philippe_4_code_042023/",
@@ -20,7 +21,8 @@
       },
       {
         "id": 2,
-        "label": "Agence Kasa",
+        "label": "AgenceKasa",
+        "label_m": "Kasa",
         "technologies": ["React", "React-Router" ,"Node.js", "Styled Components"],
         "isTraining": true,
         "site": "https://muller-philippe-8-code-072023.vercel.app/",
@@ -30,6 +32,7 @@
       {
         "id": 3,
         "label": "77 Events",
+        "label_m": "77 Events",
         "technologies": ["React","DevTools", "Node.js", "SaSS", "Jest"],
         "isTraining": true,
         "site": "https://muller-philippe-10-code-082023.vercel.app/",
@@ -39,7 +42,8 @@
       {
         "id": 4,
         "label": "ArgentBank",
-        "technologies": ["React", "Redux", "Express.js", "MongoDB", "API REST", "Swagger"],
+        "label_m": "Argent Bank",
+        "technologies": ["React", "Redux", "Express.js", "MongoDB", "REST", "Swagger"],
         "isTraining": true,
         "site": "https://argentbank-pgnm.onrender.com/",
         "git": "https://github.com/philfab/muller_philippe_11_code_092023.git",
@@ -48,6 +52,7 @@
       {
         "id": 5,
         "label": "Delphil",
+        "label_m": "Delphil",
         "technologies": ["Delphi", "C++", "TableBases"],
         "isTraining": false,
         "site": "https://delphil.nexgate.ch/",
@@ -57,7 +62,8 @@
       {
         "id": 6,
         "label": "ChesSuccess",
-        "technologies": ["C#","C++", "API Rest", "PHP", "SQL"],
+        "label_m": "ChesSuccess",
+        "technologies": ["C#","C++", "REST", "PHP", "SQL"],
         "isTraining": false,
         "site": "",
         "git": "",
@@ -66,6 +72,7 @@
       {
         "id": 7,
         "label": "MemoCrypt",
+        "label_m": "Memo Crypt",
         "technologies": ["C#", "SQL", "FontForge", "Cryptography"],
         "isTraining": false,
         "site": "",
@@ -75,6 +82,7 @@
       {
         "id": 8,
         "label": "LudoStars",
+        "label_m": "Ludo Stars",
         "technologies": ["C#", "C++", "Unity", "SQL"],
         "isTraining": false,
         "site": "",
