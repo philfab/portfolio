@@ -26,14 +26,14 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      <div
-        className={`${styles.modalBackground} ${isMenuVisible ? styles.show : ""}`}
-        onClick={(e) => {
-          e.stopPropagation();
-          setMenuVisible(false);
-          setIconTouched(false);
-        }}
-      ></div>
+    <div
+      className={`${styles.modalBackground} ${isMenuVisible ? styles.show : ""}`}
+      onClick={(e) => {
+        e.stopPropagation();
+        setMenuVisible(false);
+        setIconTouched(false);
+      }}
+    ></div>
       <div className={styles.left}>
         <TextEffect label={t("Home")} id={0} />
       </div>
