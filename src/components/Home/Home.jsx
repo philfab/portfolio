@@ -38,7 +38,9 @@ const Home = () => {
   const handleClickDetails = (id) => {
     dispatch(getProjectDetailsById(id));
   };
-  
+
+  if (!sampleData || Object.keys(sampleData).length === 0) return;
+
   return (
     <main className={styles.main}>
       <section className={styles.sidebar}>

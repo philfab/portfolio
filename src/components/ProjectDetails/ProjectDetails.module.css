@@ -12,6 +12,10 @@ a {
   animation: animTextFlow 20s infinite alternate-reverse;
 }
 
+a:hover{
+  text-decoration: underline;
+}
+
 @keyframes animTextFlow {
   0% {
     color: hsla(0, 60%, 60%, 1);
