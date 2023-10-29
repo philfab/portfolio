@@ -6,10 +6,11 @@
   cursor: pointer;
   padding: 2px;
   color: grey;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease-in-out;
   height: 40px;
   line-height: 40px;
   user-select: none;
+  transform-origin: center;
 }
 
 .active {

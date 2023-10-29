@@ -47,13 +47,13 @@ const Home = () => {
         <nav className={styles.navbar}>
           <MenuItem
             isActive={activeItem === TRAINING}
-            label={t("Training")}
+            initialLabel={t("Training")}
             onClick={() => handleClickMenuItem(TRAINING)}
             transformY={transformY}
           />
           <MenuItem
             isActive={activeItem === PROJECTS}
-            label={t("Projects")}
+            initialLabel={t("Projects")}
             onClick={() => handleClickMenuItem(PROJECTS)}
             transformY={-transformY}
           />

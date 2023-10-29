@@ -1,8 +1,10 @@
 import styles from "./MenuItem.module.css";
-import React, { useState } from "react";
+import React, { useState,useRef,useEffect } from "react";
 
-const MenuItem = ({ isActive, label, onClick, transformY }) => {
+const MenuItem = ({ isActive, initialLabel, onClick, transformY}) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [label, setLabel] = useState(initialLabel);
+  const [rotation, setRotation] = useState(0);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -12,9 +14,25 @@ const MenuItem = ({ isActive, label, onClick, transformY }) => {
     setIsHovered(false);
   };
 
-  const combinedTransform = isActive
+  const labelRef = useRef();
+
+  useEffect(() => {
+    labelRef.current = label;
+  }, [label]);
+
+  useEffect(() => {
+    if (labelRef.current !== initialLabel) {
+      setRotation(90);
+      setTimeout(() => {
+        setLabel(initialLabel);
+        setRotation(0);
+      }, 500);
+    }
+  }, [ initialLabel]);
+
+  const combinedTransform = `${isActive
     ? `translateY(${transformY}%)`
-    : `translateY(${transformY}%) scale(${isHovered ? 1.1 : 1})`;
+    : `translateY(${transformY}%) scale(${isHovered ? 1.1 : 1})`} rotateX(${rotation}deg)`;
 
   return (
     <button

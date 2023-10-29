@@ -35,7 +35,7 @@ function Header() {
       }}
     ></div>
       <div className={styles.left}>
-        <TextEffect label={t("Home")} id={0} />
+        <TextEffect initialLabel={t("Home")} id={0}/>
       </div>
       <ul className={styles.right}>
         <li
