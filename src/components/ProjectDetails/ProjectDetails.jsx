@@ -14,10 +14,11 @@ const ProjectDetails = ({ data }) => {
   const [angle, setAngle] = useState(0);
   const [animationKey, setAnimationKey] = useState(0);
   const [key, setKey] = useState(0);
+  const [rotationAxis, setRotationAxis] = useState('X');
 
   useEffect(() => {
     if (label) {
-      setAnimationKey((prevKey) => prevKey + 1);
+      setAnimationKey((prevKey) => prevKey + 1); // key change = demontage-remontage > animzoom
     }
   }, [label]);
 
@@ -30,14 +31,13 @@ const ProjectDetails = ({ data }) => {
       setLabel(t(data.label) ? t(data.label) : data.label);
       setDescription(t(`Description_${data.id}`));
       SetWebSiteText(t("Website"));
-      setAngle(90);
     }, 300);
 
     const secondTimer = setTimeout(() => {
       setAngle(0);
       setKey((prevKey) => prevKey + 1);
       document.body.style.pointerEvents = "auto";
-    }, 400);
+    }, 300);
     return () => {
       clearTimeout(firstTimer);
       clearTimeout(secondTimer);
@@ -45,8 +45,25 @@ const ProjectDetails = ({ data }) => {
     };
   }, [data, t]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) { 
+        setRotationAxis('Y');
+      } else {
+        setRotationAxis('X');
+      }
+    };
+  
+    window.addEventListener('resize', handleResize);
+    handleResize(); // appel initial
+  
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const rotateStyle = {
-    transform: `rotateX(${angle}deg)`,
+    transform: `rotate${rotationAxis}(${angle}deg)`,
     transition: "transform 0.3s ease-in-out",
   };
 
@@ -69,7 +86,7 @@ const ProjectDetails = ({ data }) => {
           __html: description.split("\n").join("<br />"),
         }}
       ></article>
-      <Slide key={key} direction="up" triggerOnce={true}>
+      <Slide key={key} direction="up" duration={rotationAxis === 'X' ? 1000 : 0} triggerOnce={true}>
         <div className={styles.buttonsContainer}>
           <ul className={styles.links}>
             {currentData.site ? (

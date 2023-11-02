@@ -16,6 +16,7 @@ const Home = () => {
   const [projects, setProjects] = useState([]);
   const dispatch = useDispatch();
   const sampleData = useSelector((state) => state.content.sampleData);
+
   const handleClickMenuItem = (item) => {
     if (activeItem !== item) {
       setActiveItem(item);

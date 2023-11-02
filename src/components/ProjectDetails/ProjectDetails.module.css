@@ -12,7 +12,7 @@ a {
   animation: animTextFlow 20s infinite alternate-reverse;
 }
 
-a:hover{
+a:hover {
   text-decoration: underline;
 }
 
@@ -83,7 +83,7 @@ a:hover{
   );
   color: #1d1d20;
   font-weight: 700;
-  letter-spacing: calc(1em / 10);
+  letter-spacing: calc(1em / 10); /* em = élément size ; rem = global size*/
   padding: calc(calc(1em / 16) / 2);
   -webkit-text-stroke-color: transparent;
   -webkit-text-stroke-width: calc(1em / 12);

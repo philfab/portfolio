@@ -16,26 +16,29 @@ function Header() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    i18n.changeLanguage(currentLanguage);
+    i18n.changeLanguage(currentLanguage); //init
   }, [currentLanguage]);
 
   const handleTouchStart = () => {
+    // mobile
     setIconTouched(true);
     setMenuVisible(true);
   };
 
   return (
     <header className={styles.header}>
-    <div
-      className={`${styles.modalBackground} ${isMenuVisible ? styles.show : ""}`}
-      onClick={(e) => {
-        e.stopPropagation();
-        setMenuVisible(false);
-        setIconTouched(false);
-      }}
-    ></div>
+      <div
+        className={`${styles.modalBackground} ${
+          isMenuVisible ? styles.show : ""
+        }`}
+        onClick={(e) => {
+          e.stopPropagation();
+          setMenuVisible(false);
+          setIconTouched(false);
+        }}
+      ></div>
       <div className={styles.left}>
-        <TextEffect initialLabel={t("Home")} id={0}/>
+        <TextEffect initialLabel={t("Home")} id={0} />
       </div>
       <ul className={styles.right}>
         <li
