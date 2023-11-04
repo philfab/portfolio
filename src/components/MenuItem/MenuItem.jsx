@@ -32,7 +32,7 @@ const MenuItem = ({ isActive, initialLabel, onClick, transformY}) => {
 
   const combinedTransform = `${isActive
     ? `translateY(${transformY}%)`
-    : `translateY(${transformY}%) scale(${isHovered ? 1.1 : 1})`} rotateX(${rotation}deg)`;
+    : `translateY(${transformY}%) scale(${isHovered ? 1.2 : 1})`} rotateX(${rotation}deg)`;
 
   return (
     <button

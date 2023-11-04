@@ -9,6 +9,7 @@ const TextEffect = ({ initialLabel, id }) => {
   const dispatch = useDispatch();
   const activeButton = useSelector(state => state.content.activeButton);
   const isActive = activeButton === id;
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     dispatch(getProjectDetailsById(id));
@@ -36,11 +37,23 @@ const TextEffect = ({ initialLabel, id }) => {
     dispatch(getProjectDetailsById(id));
   };
 
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const combinedTransform = `scale(${isHovered && !isActive ? 1.1 : 1}) rotateX(${rotation}deg)`;
+
   return (
     <button 
       className={`${isActive ? styles.active : styles.notActive} ${styles.button}`}
-      style={{ transform: `rotateX(${rotation}deg)` }}
+      style={{ transform: combinedTransform }}
       onClick={handleClick}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {label}
     </button>
