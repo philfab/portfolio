@@ -12,6 +12,8 @@ export default function ExternalLink({ href, children }) {
       href={href}
       onClick={handleClick}
       target="_blank"
+      //  noopener  = empeche window.opener  (tabnabbing)
+      //  noreferrer  = pas d'envoi HTTP Referer dans l'en-tête (confidentialité)
       rel="noopener noreferrer"
     >
       {children}
