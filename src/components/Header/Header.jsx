@@ -8,6 +8,7 @@ import TextEffect from "../TextEffect/TextEffect";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import i18n from "../../i18n";
+import ExternalLink from "../../components/ExternalLink/ExternalLink";
 
 function Header() {
   const [isMenuVisible, setMenuVisible] = useState(false);
@@ -54,22 +55,14 @@ function Header() {
         </li>
 
         <li>
-          <a
-            href="mailto:mpemploipo@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ExternalLink href="mailto:mpemploipo@gmail.com">
             <MailIcon className={styles.svgIcon} alt="Mail" />
-          </a>
+          </ExternalLink>
         </li>
         <li>
-          <a
-            href="https://github.com/philfab/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ExternalLink href="https://github.com/philfab/">
             <GithubIcon className={styles.svgIcon} alt="GitHub" />
-          </a>
+          </ExternalLink>
         </li>
       </ul>
     </header>

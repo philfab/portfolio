@@ -1,11 +1,12 @@
-import styles from './LinkButton.module.css';
+import styles from "./LinkButton.module.css";
+import ExternalLink from "../../components/ExternalLink/ExternalLink";
 
 const LinkButton = ({ text, link }) => {
   return (
     <li>
-      <a href={link} target="_blank" rel="noreferrer">
+      <ExternalLink href={link}>
         <button className={styles.buttonLink}>{text}</button>
-      </a>
+      </ExternalLink>
     </li>
   );
 };
