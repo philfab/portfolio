@@ -58,10 +58,10 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: "en",
-  keySeparator: false,
+  lng: "en", // default language
+  keySeparator: false, //ne pas utiliser de séparateurs de clés
   interpolation: {
-    escapeValue: false,
+    escapeValue: false,// désactive l'échappement des valeurs d'interpolation
   },
 });
 
