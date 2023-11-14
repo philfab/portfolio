@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { ReactComponent as MailIcon } from "../../assets/images/mail.svg";
 import { ReactComponent as GithubIcon } from "../../assets/images/github.svg";
 import { ReactComponent as LangIcon } from "../../assets/images/lang.svg";
+import { ReactComponent as LinkedInIcon } from "../../assets/images/linkedin.svg";
 import LanguageMenu from "../../components/LanguageMenu/LanguageMenu";
 import TextEffect from "../TextEffect/TextEffect";
 import { useTranslation } from "react-i18next";
@@ -53,7 +54,11 @@ function Header() {
           <LangIcon className={styles.langIcon} alt="Language" />
           <LanguageMenu isVisible={isMenuVisible} />
         </li>
-
+        <li>
+          <ExternalLink href="https://linkedin.com/in/phil-fab">
+            <LinkedInIcon className={styles.svgIcon} alt="LinkedIn" />
+          </ExternalLink>
+        </li>
         <li>
           <ExternalLink href="mailto:mpemploipo@gmail.com">
             <MailIcon className={styles.svgIcon} alt="Mail" />
@@ -64,6 +69,7 @@ function Header() {
             <GithubIcon className={styles.svgIcon} alt="GitHub" />
           </ExternalLink>
         </li>
+
       </ul>
     </header>
   );
