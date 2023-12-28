@@ -9,8 +9,8 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <span>©2023 Muller Philippe</span>
-      <button onClick={() => setShowModal(true)}>Contact</button>
-      {showModal && <ContactModal onClose={() => setShowModal(false)} />}
+      {/* <button onClick={() => setShowModal(true)}>Contact</button>
+      {showModal && <ContactModal onClose={() => setShowModal(false)} />} */}
     </footer>
   );
 }
