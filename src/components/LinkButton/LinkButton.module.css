@@ -31,3 +31,12 @@
     transform: scale(1);
   }
 }
+
+@media (hover: none) {
+  .buttonLink:hover {
+    color: #0099ff;
+    background: #1d1d20;
+    box-shadow: none;
+    transform: scale(1);
+  }
+}

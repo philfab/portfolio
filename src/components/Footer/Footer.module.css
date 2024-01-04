@@ -4,6 +4,7 @@
   justify-content: flex-end;
   align-items: center;
   padding: 1rem 0 1rem 0;
+  gap: 20px;
 }
 
 .footer span {
@@ -11,6 +12,18 @@
   margin-right: 2rem;
   user-select: none;
   animation: animTextFlow 10s infinite alternate;
+}
+
+.footer button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.footer button > img {
+  width: 30px;
+  height:30px;
+  object-fit: contain;
 }
 
 @keyframes animTextFlow {
